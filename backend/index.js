@@ -110,6 +110,8 @@ class weather {
     }
   }
 
+  // echo
+
   getLocationKey() {
     this.generateLocationKeyUrl();
     return new Promise((resolve, reject) => {
@@ -942,15 +944,13 @@ app.post("/delete-cloth", function (req, res) {
   }
 
   console.log(req.body.RFID);
-  
- const  query = "DELETE from inventory WHERE RFID = ?";
+
+  const query = "DELETE from inventory WHERE RFID = ?";
   con.query(query, [req.body.RFID], function (err, result) {
     if (err) throw err;
-    res.status(200).json({success:true});
+    res.status(200).json({ success: true });
   });
 });
-
-
 
 app.get("/logout", function (req, res) {
   res.cookie("session_token", "", { maxAge: 0 });
