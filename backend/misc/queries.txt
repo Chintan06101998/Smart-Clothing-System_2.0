@@ -1,2 +1,0 @@
-# To make all availableInCloset outside
-update inventory set availableInCloset = 0;

@@ -1,2 +1,0 @@
-ALTER TABLE `super_user` CHANGE `deviceID` `deviceID` VARCHAR(255) NOT NULL;
-ALTER TABLE `user_profile` CHANGE `deviceID` `deviceID` VARCHAR(255) NOT NULL;
